@@ -1,0 +1,10 @@
+﻿; simple folder-based stack
+type=folder
+; the folder to load files/links from
+folder=C:\Users\Kody\Settings\Shortcuts\Venafi
+; include sub folders or not
+subfolders=true
+; sort files and folders together
+combine=true
+; sort key to provide sorting
+sortKey=]
