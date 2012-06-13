@@ -183,12 +183,12 @@
     <Message Text="Stamping version as: $(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
 
     <!--<MSBuild.ExtensionPack.FileSystem.File TaskAction="Replace" RegexPattern="regex" Replacement="iiiii" Files="@(FilesToParse)"/>-->
-    <MSBuild.ExtensionPack.FileSystem.File
+    <!--<MSBuild.ExtensionPack.FileSystem.File
 		TaskAction="Replace"
 		TextEncoding="ASCII"
       RegexPattern="Copyright © (?'FirstYear'\d\d\d\d)-\d\d\d\d Kody Brown."
       Replacement="Copyright © \1-$(Year) Kody Brown."
-      Path="*.cs" />
+      Path="*.cs" />-->
 
   </Target>
   <Target Name="AfterBuild">
