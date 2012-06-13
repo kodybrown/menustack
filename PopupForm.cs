@@ -1,4 +1,14 @@
-﻿using System;
+﻿//
+// Copyright © 2004-2011 Kody Brown.
+// All Rights Reserved.
+//
+// This program is unpublished proprietary source code of Bricksoft.com.
+// You may not use or create derivative works from this code.
+//
+// Author: Kody Brown (kody@bricksoft.com)
+//
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;

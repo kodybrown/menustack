@@ -1,3 +1,13 @@
+//
+// Copyright © 2004-2011 Bricksoft.com.
+// All Rights Reserved.
+//
+// This program is unpublished proprietary source code of Bricksoft.com.
+// You may not use or create derivative works from this code.
+//
+// Author: Kody Brown (kody@bricksoft.com)
+//
+
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;

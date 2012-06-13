@@ -8,8 +8,8 @@
     <ProjectGuid>{D37104B5-4108-4799-A7A1-D37F80319D27}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MenuStack</RootNamespace>
-    <AssemblyName>MenuStack</AssemblyName>
+    <RootNamespace>StackedMenu</RootNamespace>
+    <AssemblyName>StackedMenu</AssemblyName>
     <ApplicationIcon>Resources\AppIcon_Menu.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -149,7 +149,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "C:\Kody\Root" xcopy "$(TargetPath)" "C:\Kody\Root\$(TargetFileName)" /y</PostBuildEvent>
+    <PostBuildEvent>if exist "C:\Kody\Root" xcopy "$(TargetPath)" "C:\Kody\Root\" /y</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Label="Versioning">
     <VersioningMajor>4</VersioningMajor>
@@ -169,8 +169,27 @@
       <Output TaskParameter="FormattedTime" PropertyName="BuildDate" />
       <Output TaskParameter="Year" PropertyName="Year" />
     </Time>
-    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\AssemblyInfo.cs" AssemblyTitle="Application Menu Stack ver:$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyDescription="Application Menu Stack" AssemblyCompany="" AssemblyProduct="edline" AssemblyCopyright="Copyright © 2004-$(Year) Kody Brown." ComVisible="false" CLSCompliant="false" Guid="D37104B5-4108-4799-A7A1-D37F80319D27" AssemblyVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" AssemblyFileVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
-    <Message Text="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
+    <AssemblyInfo CodeLanguage="CS" 
+      OutputFile="Properties\AssemblyInfo.cs" 
+      AssemblyTitle="Stacked Menu ver:$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)"
+      AssemblyDescription="Stacked Menu"
+      AssemblyCompany="Bricksoft.com"
+      AssemblyProduct="Stacked Menu"
+      AssemblyCopyright="$(CopyrightStatement)"
+      ComVisible="false" CLSCompliant="false" 
+      Guid="D37104B5-4108-4799-A7A1-D37F80319D27"
+      AssemblyVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)"
+      AssemblyFileVersion="$(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
+    <Message Text="Stamping version as: $(VersioningMajor).$(VersioningMinor).$(BuildDate.Substring(1)).$(CommitCount)" />
+
+    <!--<MSBuild.ExtensionPack.FileSystem.File TaskAction="Replace" RegexPattern="regex" Replacement="iiiii" Files="@(FilesToParse)"/>-->
+    <MSBuild.ExtensionPack.FileSystem.File
+		TaskAction="Replace"
+		TextEncoding="ASCII"
+      RegexPattern="Copyright © (?'FirstYear'\d\d\d\d)-\d\d\d\d Kody Brown."
+      Replacement="Copyright © \1-$(Year) Kody Brown."
+      Path="*.cs" />
+
   </Target>
   <Target Name="AfterBuild">
   </Target>
