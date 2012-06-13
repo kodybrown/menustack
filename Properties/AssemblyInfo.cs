@@ -14,14 +14,14 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Stacked Menu ver:4.1.20612.2")]
+[assembly: AssemblyTitle("Stacked Menu ver:4.1.20612.5")]
 [assembly: AssemblyDescription("Stacked Menu")]
 [assembly: AssemblyCompany("Bricksoft.com")]
 [assembly: AssemblyProduct("Stacked Menu")]
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(false)]
 [assembly: Guid("D37104B5-4108-4799-A7A1-D37F80319D27")]
-[assembly: AssemblyVersion("4.1.20612.2")]
-[assembly: AssemblyFileVersion("4.1.20612.2")]
+[assembly: AssemblyVersion("4.1.20612.5")]
+[assembly: AssemblyFileVersion("4.1.20612.5")]
 
 
