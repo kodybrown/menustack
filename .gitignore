@@ -1,6 +1,5 @@
-obj
-bin
 *.csproj.user
 *.suo
-[Bb]in/*
-[Oo]bj/*
+[Bb]in/
+[Oo]bj/
+\#Samples/
