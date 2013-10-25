@@ -1,10 +1,19 @@
-﻿using System;
+﻿//
+// Copyright © 2004-2011 Bricksoft.com.
+// All Rights Reserved.
+//
+// This program is unpublished proprietary source code of Bricksoft.com.
+// You may not use or create derivative works from this code.
+//
+// Author: Kody Brown (kody@bricksoft.com)
+//
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace MenuStack
 {
-
 	public static class ToolStripExtensions
 	{
 		public static ToolStripSeparator AddTag( this ToolStripSeparator @ToolStripSeparator, Object Tag )

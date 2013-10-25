@@ -11,7 +11,8 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Bricksoft.PowerCode;
+using Bricksoft.PowerCode.Extensions;
+using Application = System.Windows.Forms.Application;
 
 namespace MenuStack
 {
