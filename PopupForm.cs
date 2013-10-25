@@ -27,7 +27,7 @@ namespace MenuStack
 		/// <summary>
 		/// Gets the command-line arguments;
 		/// </summary>
-		private CommandLineArguments args = null;
+		private CommandLine args = null;
 
 		private string prodName = "Menu Stacker";
 		private string envName = "menustack";
@@ -160,7 +160,7 @@ namespace MenuStack
 
 		private void ParseCommandLine( string[] arguments )
 		{
-			args = new CommandLineArguments(arguments);
+			args = new CommandLine(arguments);
 
 			//
 			// Include subfolders automatically.
@@ -251,8 +251,8 @@ namespace MenuStack
 			// -----------------------------------------------------------------------------------------------------------------------------
 			// Defaults to the current folder if not specified.
 			//
-			if (args.HasValue(CommandLineArguments.UnnamedItem + "1")) {
-				FolderPath = args.GetString(Environment.CurrentDirectory, CommandLineArguments.UnnamedItem + "1");
+			if (args.HasValue(CommandLine.UnnamedItem + "1")) {
+				FolderPath = args.GetString(Environment.CurrentDirectory, CommandLine.UnnamedItem + "1");
 			} else {
 				FolderPath = Environment.CurrentDirectory;
 			}

@@ -8,14 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Reflection.AssemblyTitle("MenuStack ver:4.1.31024.8")]
+[assembly: System.Reflection.AssemblyTitle("MenuStack ver:4.1.31024.9")]
 [assembly: System.Reflection.AssemblyDescription("MenuStack")]
 [assembly: System.Reflection.AssemblyCompany("Bricksoft.com")]
 [assembly: System.Reflection.AssemblyProduct("MenuStack")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.CLSCompliant(false)]
 [assembly: System.Runtime.InteropServices.Guid("D37104B5-4108-4799-A7A1-D37F80319D27")]
-[assembly: System.Reflection.AssemblyVersion("4.1.31024.8")]
-[assembly: System.Reflection.AssemblyFileVersion("4.1.31024.8")]
+[assembly: System.Reflection.AssemblyVersion("4.1.31024.9")]
+[assembly: System.Reflection.AssemblyFileVersion("4.1.31024.9")]
 
 
