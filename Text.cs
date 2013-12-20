@@ -1,26 +1,26 @@
-//
-// Copyright (C) 2008-2013 Kody Brown (kody@bricksoft.com).
-// 
-// MIT License:
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to
-// deal in the Software without restriction, including without limitation the
-// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-// sell copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-// DEALINGS IN THE SOFTWARE.
-//
+/*!
+	Copyright (C) 2008-2013 Kody Brown (kody@bricksoft.com).
+	
+	MIT License:
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to
+	deal in the Software without restriction, including without limitation the
+	rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+	sell copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+	FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+	DEALINGS IN THE SOFTWARE.
+*/
 
 using System;
 using System.Collections.Generic;
@@ -39,10 +39,10 @@ namespace Bricksoft.PowerCode
 		public static string Wrap( string Text ) { return Wrap(Text, null, null); }
 
 		/// <summary>
-		/// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidths"/>.
+		/// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidth"/>.
 		/// </summary>
 		/// <param name="Text">The text to wrap.</param>
-		/// <param name="WrapWidths">The maximum number of characters per line.</param>
+		/// <param name="WrapWidth">The maximum number of characters per line.</param>
 		/// <returns></returns>
 		public static string Wrap( string Text, int WrapWidth ) { return Wrap(Text, WrapWidth, 0); }
 
@@ -133,11 +133,11 @@ namespace Bricksoft.PowerCode
 		//}
 
 		/// <summary>
-		/// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidths"/>, 
+		/// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidth"/>, 
 		/// while indenting each line by <paramref name="Indentations"/> spaces.
 		/// </summary>
 		/// <param name="Text">The text to wrap.</param>
-		/// <param name="WrapWidths">The maximum number of characters per line.</param>
+		/// <param name="WrapWidth">The maximum number of characters per line.</param>
 		/// <param name="Indentations">The number of spaces to prepend onto each line.</param>
 		/// <returns></returns>
 		public static string Wrap( string Text, int WrapWidth, params int[] Indentations ) { return Wrap(Text, new int[] { WrapWidth }, Indentations); }

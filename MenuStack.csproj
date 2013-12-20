@@ -138,7 +138,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "C:\Kody\Root" xcopy "$(TargetPath)" "C:\Kody\Root\" /y</PostBuildEvent>
+    <PostBuildEvent>if exist "%25UserProfile%25\Root\$(TargetFileName)" xcopy "$(TargetPath)" "%25UserProfile%25\Root" /y</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Label="Versioning">
     <VersioningMajor>4</VersioningMajor>
