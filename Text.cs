@@ -46,92 +46,6 @@ namespace Bricksoft.PowerCode
 		/// <returns></returns>
 		public static string Wrap( string Text, int WrapWidth ) { return Wrap(Text, WrapWidth, 0); }
 
-		///// <summary>
-		///// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidths"/>, 
-		///// while indenting each line by <paramref name="Indentations"/> spaces.
-		///// </summary>
-		///// <param name="Text">The text to wrap.</param>
-		///// <param name="WrapWidths">The maximum number of characters per line.</param>
-		///// <param name="Indentations">The number of spaces to prepend onto each line.</param>
-		///// <returns></returns>
-		//public static string Wrap( string Text, int WrapWidths, params int[] Indentations )
-		//{
-		//	List<string> ar;
-		//	string temp;
-		//	int brk;
-		//	int w;
-		//	int idIndex;
-		//	List<string> ids;
-
-		//	if (WrapWidths <= 0) {
-		//		WrapWidths = Console.WindowWidth;
-		//	}
-
-		//	brk = -1;
-		//	ar = new List<string>(Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None));
-		//	idIndex = 0;
-		//	ids = new List<string>(Indentations.Length);
-
-		//	Func<int> identIdx = delegate()
-		//	{
-		//		return Math.Min(idIndex, Indentations.Length - 1);
-		//	};
-
-		//	foreach (int indent in Indentations) {
-		//		ids.Add(new string(' ', indent));
-		//	}
-
-		//	for (int i = 0; i < ar.Count; i++) {
-		//		w = WrapWidths - Indentations[identIdx()] - 1;
-		//		if (ar[i].Length > w) {
-		//			temp = ar[i];
-		//			brk = temp.Substring(0, w).LastIndexOfAny(lineBreaks) + 1;
-
-		//			ar[i] = ids[identIdx()] + temp.Substring(0, brk);
-		//			idIndex++;
-		//			i++;
-
-		//			//temp = temp.Substring(brk);
-		//			if (brk < temp.Length - 1 && temp[brk] == ' ') {
-		//				temp = temp.Substring(brk + 1);
-		//			} else {
-		//				temp = temp.Substring(brk);
-		//			}
-
-		//			while (temp.Length > 0) {
-		//				w = WrapWidths - Indentations[identIdx()] - 1;
-		//				if (temp.Length > w) {
-		//					brk = temp.Substring(0, w).LastIndexOfAny(lineBreaks) + 1;
-		//					if (brk == 0) {
-		//						// The string could not be broken up nicely, 
-		//						// so just cut the line at the wrap width..
-		//						brk = w;
-		//					}
-		//				} else {
-		//					brk = temp.Length;
-		//				}
-
-		//				ar.Insert(i, ids[identIdx()] + temp.Substring(0, brk));
-		//				idIndex++;
-		//				i++;
-
-		//				if (brk < temp.Length - 1 && temp[brk] == ' ') {
-		//					temp = temp.Substring(brk + 1);
-		//				} else {
-		//					temp = temp.Substring(brk);
-		//				}
-		//			}
-		//		} else {
-		//			ar[i] = ids[identIdx()] + ar[i];
-		//		}
-
-		//		idIndex++;
-		//	}
-
-		//	//return string.Join(Environment.NewLine + padding, ar);
-		//	return string.Join("\n", ar);
-		//}
-
 		/// <summary>
 		/// Wraps the specified <paramref name="Text"/> at <paramref name="WrapWidth"/>, 
 		/// while indenting each line by <paramref name="Indentations"/> spaces.
@@ -152,7 +66,11 @@ namespace Bricksoft.PowerCode
 			List<string> ids;
 
 			if (WrapWidths == null || WrapWidths.Length == 0) {
-				WrapWidths = new int[] { Console.WindowWidth };
+				try {
+					WrapWidths = new int[] { Console.WindowWidth };
+				} catch (Exception) {
+					WrapWidths = new int[] { 80 };
+				}
 			}
 			if (Indentations == null || Indentations.Length == 0) {
 				Indentations = new int[] { 0 };

@@ -149,7 +149,7 @@ namespace Bricksoft.PowerCode
 		/// </summary>
 		/// <param name="builder"></param>
 		/// <param name="format"></param>
-		/// <param name="arguments"></param>
+		/// <param name="args"></param>
 		public static StringBuilder AppendLineFormat( this StringBuilder builder, string format, params Object[] args )
 		{
 			if (builder == null) {
@@ -185,7 +185,7 @@ namespace Bricksoft.PowerCode
 		/// <param name="builder"></param>
 		/// <param name="expression"></param>
 		/// <param name="format"></param>
-		/// <param name="arguments"></param>
+		/// <param name="args"></param>
 		public static StringBuilder AppendLineFormatIf( this StringBuilder builder, bool expression, string format, params Object[] args )
 		{
 			if (builder == null) {
@@ -204,7 +204,7 @@ namespace Bricksoft.PowerCode
 		/// <param name="builder"></param>
 		/// <param name="expression"></param>
 		/// <param name="format"></param>
-		/// <param name="arguments"></param>
+		/// <param name="args"></param>
 		public static StringBuilder AppendFormatIf( this StringBuilder builder, bool expression, string format, params Object[] args )
 		{
 			if (builder == null) {

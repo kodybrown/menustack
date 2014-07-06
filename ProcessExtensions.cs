@@ -25,7 +25,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Bricksoft.PowerCode.Extensions
+namespace Bricksoft.PowerCode
 {
 	/// <summary>
 	/// Common methods for dealing with Processes.
